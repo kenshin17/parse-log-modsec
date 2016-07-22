@@ -1,5 +1,5 @@
 # parse log modsecurity 
 
-##useage: 
+##run: 
 
 node log.js /var/log/nginx/error.log
