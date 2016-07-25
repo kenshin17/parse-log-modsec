@@ -2,6 +2,8 @@ var http =  require('http');
 var filename = process.argv[2];
 var parse = require('./parse.js');
 var mysql = require('mysql');
+var db = require('db');
+
 
 if (!filename) {
         console.log('Usage: node log.js filename')
@@ -10,12 +12,14 @@ if (!filename) {
 var spawn = require('child_process').spawn;
 var tail = spawn('tail', ['-f', filename]);
 
-var connection = mysql.createConnection({
-  host: "localhost",
-  user: "test",
-  password: "ubuntu",
-  database : 'modsec'
-});
+// var connection = mysql.createConnection({
+//   host: "localhost",
+//   user: "test",
+//   password: "ubuntu",
+//   database : 'modsec'
+// });
+
+connection = db.connection;
 
 connection.connect(function(err){
   if(err){
