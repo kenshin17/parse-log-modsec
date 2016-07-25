@@ -4,22 +4,17 @@ var parse = require('./parse.js');
 var mysql = require('mysql');
 var db = require('db');
 
+var connection = db.connection;
+
 
 if (!filename) {
         console.log('Usage: node log.js filename')
+        process.exit()
 };
 
 var spawn = require('child_process').spawn;
 var tail = spawn('tail', ['-f', filename]);
 
-// var connection = mysql.createConnection({
-//   host: "localhost",
-//   user: "test",
-//   password: "ubuntu",
-//   database : 'modsec'
-// });
-
-connection = db.connection;
 
 connection.connect(function(err){
   if(err){
