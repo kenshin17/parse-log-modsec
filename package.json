@@ -1,0 +1,26 @@
+{
+  "name": "parse-log-modsec",
+  "version": "1.0.0",
+  "description": "parse log modsec and save to mysql database",
+  "main": "log.js",
+  "scripts": {
+    "test": "node log.js /var/log/nginx/error.log"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kenshin17/parse-log-modsec.git"
+  },
+  "keywords": [
+    "parse",
+    "log"
+  ],
+  "author": "k",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kenshin17/parse-log-modsec/issues"
+  },
+  "homepage": "https://github.com/kenshin17/parse-log-modsec#readme",
+  "dependencies": {
+    "mysql": "^2.11.1"
+  }
+}
