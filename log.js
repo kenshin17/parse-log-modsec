@@ -8,7 +8,7 @@ var connection = db.connection;
 
 
 if (!filename) {
-        console.log('Usage: node log.js filename')
+        console.log('Usage: node log.js log_modsec_file')
         process.exit()
 };
 
