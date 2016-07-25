@@ -1,7 +1,6 @@
 var http =  require('http');
 var filename = process.argv[2];
 var parse = require('./parse.js');
-var mysql = require('mysql');
 var db = require('./db');
 
 var connection = db.connection;
